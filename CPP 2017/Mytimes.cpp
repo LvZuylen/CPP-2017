@@ -49,12 +49,12 @@ bool Mytimes::equals(Mytimes & time) {
 }
 void Mytimes::normalise() {
 	if (secs > 59) {
+		mins += secs / 60;
 		secs %= 60;
-		mins++;
 	}
 	if (mins > 59) {
+		hours+=mins/60;
 		mins %= 60;
-		hours++;
 	}
 }
 //bool Mytimes::compare(int hours, int mins, int secs) {
