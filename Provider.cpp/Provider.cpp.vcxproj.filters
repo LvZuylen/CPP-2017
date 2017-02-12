@@ -41,5 +41,14 @@
     <ClCompile Include="Provider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Sms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mobiel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

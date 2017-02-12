@@ -1,16 +1,16 @@
 #pragma once
+
+class Mobiel;
+class Sms;
+
 class Provider {
-
-public:
-	Mobiel *lijst;
-
 private:
-	void setLijst(Mobiel *lst);
-	Mobiel *getMobiel(int nr);
-	void verwerkBericht(const Sms &sms);
-	
-
-
+	Mobiel *lijst;
+public:
+	~Provider();
+	virtual void setLijst(Mobiel *lst);
+	virtual Mobiel *getMobiel(int nr);
+	virtual void verwerkBericht(const Sms &sms);
 };
 
 
