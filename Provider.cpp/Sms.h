@@ -9,6 +9,7 @@ public:
 	Sms(int van, int naar, std::string tekst);
 	virtual int getNaar();
 	virtual std::string smsInfo();
+private:
 	int van;
 	int naar;
 	std::string tekst;
