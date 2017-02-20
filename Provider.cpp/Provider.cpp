@@ -5,14 +5,14 @@
 #include "Provider.h"
 #include "Mobiel.h"
 #include "Sms.h"
-#include <vector>
 
 Provider::~Provider() {
 
 }
 
-void Provider::setLijst(Mobiel lst) {
-	lijst.push_back(lst);
+void Provider::setLijst(Mobiel *lst) {
+	lijstVector.push_back(*lst);
+	lijst = lst;
 }
 
 Mobiel* Provider::getMobiel(int nr) {
@@ -26,6 +26,16 @@ Mobiel* Provider::getMobiel(int nr) {
 }
 
 void Provider::verwerkBericht(const Sms &sms) {
-	lijst->verzend(sms.tekst, sms.naar);
-	lijst->ontvang(sms);
+	for (unsigned int x = 0; x < lijstVector.size(); x++) {
+		if (lijstVector.at(x).telnr == sms.van) {
+			lijstVector.at(x).verzend(sms.tekst, sms.naar);
+		}
+	}
+	for (unsigned int y = 0; y < lijstVector.size(); y++) {
+		if (lijstVector.at(y).telnr == sms.naar) {
+			lijstVector.at(y).ontvang(sms);
+		}
+	}
+	//lijst->verzend(sms.tekst, sms.naar);
+	//lijst->ontvang(sms);
 }

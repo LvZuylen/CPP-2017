@@ -14,6 +14,7 @@ public:
 	virtual void ontvang(const Sms &sms);
 	virtual void verzend(const std::string &tekst, int naar);
 	virtual std::string mobielInfo() const;
+	virtual void addContact(std::string naam, int nr);
 //private:
 	std::map<std::string, int> contactLijst;
 	int telnr;

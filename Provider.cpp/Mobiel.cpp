@@ -30,3 +30,7 @@ void Mobiel::verzend(const std::string &tekst, int naar) {
 std::string Mobiel::mobielInfo() const {
 	return "telnr: \"" + std::to_string(telnr) + "\" bericht: \"" + bericht.tekst + "\" van " + std::to_string(bericht.van) + " naar " + std::to_string(bericht.naar) + "\n";
 }
+
+void Mobiel::addContact(std::string naam, int nr) {
+	contactLijst.insert(std::pair<std::string, int>(naam, nr));
+}
