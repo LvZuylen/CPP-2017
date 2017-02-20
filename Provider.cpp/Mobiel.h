@@ -9,13 +9,14 @@ class Sms;
 
 class Mobiel {
 public:
-	Mobiel(Provider *provider = nullptr, int tellnr = 0);
+	Mobiel(Provider *provider = nullptr, int tellnr = 0, std::string contactNaam = "");
 	~Mobiel();
 	virtual void ontvang(const Sms &sms);
 	virtual void verzend(const std::string &tekst, int naar);
 	virtual std::string mobielInfo() const;
 	virtual void addContact(std::string naam, int nr);
-//private:
+	virtual void printContacts();
+	//private:
 	std::map<std::string, int> contactLijst;
 	int telnr;
 	Provider *provider;

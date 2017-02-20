@@ -5,10 +5,11 @@
 #include "Sms.h"
 #include "Provider.h"
 
-Mobiel::Mobiel(Provider * provider, int tellnr)
+Mobiel::Mobiel(Provider * provider, int tellnr, std::string contactNaam)
 	: bericht(0,0,"") {
 	this->provider = provider;
 	telnr = tellnr;
+	addContact(contactNaam, tellnr);
 }
 
 Mobiel::~Mobiel() {
@@ -32,5 +33,20 @@ std::string Mobiel::mobielInfo() const {
 }
 
 void Mobiel::addContact(std::string naam, int nr) {
-	contactLijst.insert(std::pair<std::string, int>(naam, nr));
+	std::map<std::string, int>::iterator it;
+	it = contactLijst.find(naam);
+	if (it != contactLijst.end()) {
+		std::cout << "Contact already exists!" << std::endl;
+	}
+	else { 
+		contactLijst.insert(std::pair<std::string, int>(naam, nr));
+		std::cout << "Contact: " << naam << " met nummer: " << nr << " toegevoegd" << std::endl;
+	}
+}
+
+void Mobiel::printContacts() {
+	for (auto elem : this->contactLijst)
+	{
+		std::cout << elem.first << " " << elem.second << " " << "\n";
+	}
 }
