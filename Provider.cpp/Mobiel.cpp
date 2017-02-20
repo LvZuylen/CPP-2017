@@ -5,20 +5,28 @@
 #include "Sms.h"
 #include "Provider.h"
 
-Mobiel::Mobiel(Provider * provider, int tellnr) {
+Mobiel::Mobiel(Provider * provider, int tellnr)
+	: bericht(0,0,"") {
 	this->provider = provider;
 	telnr = tellnr;
 }
 
-void Mobiel::ontvang(const Sms & sms) {
+Mobiel::~Mobiel() {
+
+}
+
+void Mobiel::ontvang(const Sms &sms) {
+	bericht.van = sms.van;
+	bericht.naar = sms.naar;
 	bericht.tekst = sms.tekst;
 }
 
-void Mobiel::verzend(std::string tekst, int naar) {
+void Mobiel::verzend(const std::string &tekst, int naar) {
+	bericht.van = telnr;
 	bericht.naar = naar;
-	bericht.tekst = tekst;
+	bericht.tekst = tekst; 
 }
 
 std::string Mobiel::mobielInfo() const {
-	return "telnr: \"" + std::to_string(telnr) + "\" bericht van " + std::to_string(bericht.van) + " naar " + std::to_string(bericht.naar) + "\n";
+	return "telnr: \"" + std::to_string(telnr) + "\" bericht: \"" + bericht.tekst + "\" van " + std::to_string(bericht.van) + " naar " + std::to_string(bericht.naar) + "\n";
 }

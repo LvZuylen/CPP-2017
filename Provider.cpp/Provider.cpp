@@ -5,13 +5,14 @@
 #include "Provider.h"
 #include "Mobiel.h"
 #include "Sms.h"
+#include <vector>
 
 Provider::~Provider() {
-	delete lijst;
+
 }
 
-void Provider::setLijst(Mobiel * lst) {
-	lijst = lst;
+void Provider::setLijst(Mobiel lst) {
+	lijst.push_back(lst);
 }
 
 Mobiel* Provider::getMobiel(int nr) {
