@@ -6,25 +6,26 @@
 #include "Mobiel.h"
 #include "Sms.h"
 
+
 Provider::~Provider() {
-	delete lijst;
+
 }
 
-void Provider::setLijst(Mobiel * lst) {
-	lijst = lst;
+void Provider::setLijst(Mobiel lst) {
+	lijst.push_back(&lst);
 }
 
 Mobiel* Provider::getMobiel(int nr) {
 	int pa = 0;
 	for (int i = 0; i < sizeof(lijst); i++) {
-		if (lijst[i].telnr == nr) {
+		if (lijst.at(i)->telnr == nr) {
 			pa = i;
 		}
 	}
-	return &lijst[pa];
+	return lijst.at(pa);
 }
 
 void Provider::verwerkBericht(const Sms &sms) {
-	lijst->verzend(sms.tekst, sms.naar);
-	lijst->ontvang(sms);
+	lijst.back()->verzend(sms.tekst, sms.naar);
+	lijst.back()->ontvang(sms);
 }

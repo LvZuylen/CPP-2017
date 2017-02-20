@@ -1,5 +1,2 @@
-﻿  Mobiel.cpp
-  Main.cpp
-  Generating Code...
-  Provider.cpp.vcxproj -> C:\Users\Justi\Source\Repos\CPP-2017\Provider.cpp\Debug\Provider.exe
-  Provider.cpp.vcxproj -> C:\Users\Justi\Source\Repos\CPP-2017\Provider.cpp\Debug\Provider.pdb (Full PDB)
+﻿  Main.cpp
+c:\users\justi\source\repos\cpp-2017\provider.cpp\main.cpp(12): error C4700: uninitialized local variable 'sms' used
