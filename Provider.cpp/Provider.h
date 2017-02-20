@@ -1,14 +1,12 @@
 #pragma once
 
-#include <vector>
-
 class Mobiel;
 class Sms;
 
 class Provider {
 private:
 	//Mobiel *lijst;
-	std::vector<Mobiel*> lijst;
+	std::vector<Mobiel> lijst;
 public:
 	~Provider();
 	virtual void setLijst(Mobiel lst);
