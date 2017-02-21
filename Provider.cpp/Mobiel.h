@@ -3,6 +3,7 @@
 #include <string>
 #include <map>
 #include "Sms.h"
+#include <vector>
 
 class Provider;
 class Sms;
@@ -18,9 +19,11 @@ public:
 	virtual void showContacts();
 	virtual void removeContact(std::string naam);
 	virtual void editContact(std::string naam, int nr, std::string newNaam, int newNr);
-
+	virtual void addBericht(Sms Bericht);
+	
 
 //private:
+	std::vector<Sms> berichten;
 	std::map<std::string, int> contactLijst;
 	int telnr;
 	Provider *provider;
