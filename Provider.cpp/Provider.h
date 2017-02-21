@@ -8,6 +8,7 @@ class Provider {
 private:
 	Mobiel *lijst;
 	std::vector<Mobiel> lijstVector;
+	std::vector<int> nummerLijst;
 public:
 	~Provider();
 	virtual void setLijst(Mobiel *lst);

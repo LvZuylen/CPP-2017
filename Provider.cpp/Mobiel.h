@@ -11,7 +11,7 @@ class Sms;
 class Mobiel {
 public:
 	Mobiel(Provider *provider = nullptr, int tellnr = 0);
-	~Mobiel();
+	virtual ~Mobiel();
 	virtual void ontvang(const Sms &sms);
 	virtual void verzend(const std::string &tekst, int naar);
 	virtual const std::string mobielInfo();

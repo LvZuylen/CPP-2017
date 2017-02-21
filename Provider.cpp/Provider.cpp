@@ -12,6 +12,15 @@ Provider::~Provider() {
 
 void Provider::setLijst(Mobiel *lst) {
 	lijstVector.push_back(*lst);
+	for (int i = 0; i < nummerLijst.size(); i) {
+		if (nummerLijst.at(i) != lst->telnr) {
+			i++;
+		}
+		else {
+			nummerLijst.push_back(lst->telnr);
+			break;
+		}
+	}
 	lijst = lst;
 }
 
