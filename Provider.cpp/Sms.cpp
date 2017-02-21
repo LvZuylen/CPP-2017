@@ -2,6 +2,8 @@
 #include "Sms.h"
 #include "Provider.h"
 #include "Mobiel.h"
+//ayylmao
+//wtf
 
 Sms::Sms(int van, int naar, std::string tekst) {
 	this->van = van;

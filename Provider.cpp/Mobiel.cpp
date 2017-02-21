@@ -22,6 +22,7 @@ void Mobiel::ontvang(const Sms &sms) {
 	bericht.van = sms.van;
 	bericht.naar = sms.naar;
 	bericht.tekst = sms.tekst;
+	addBericht(bericht);
 }
 
 void Mobiel::verzend(const std::string &tekst, int naar) {
@@ -31,7 +32,13 @@ void Mobiel::verzend(const std::string &tekst, int naar) {
 }
 
 const std::string Mobiel::mobielInfo() {
-	return "telnr: \"" + std::to_string(telnr) + "\" bericht: \"" + bericht.tekst + "\" van " + std::to_string(bericht.van) + " naar " + std::to_string(bericht.naar) + "\n";
+	std::cout << "Messages: " << "\n";
+
+	for (int i = 0; i < berichten.size(); i++) {
+		std::cout << "telnr: \"" + std::to_string(telnr) + "\" bericht: \"" + berichten.at(i).tekst + "\" van " + std::to_string(berichten.at(i).van) + " naar " + std::to_string(berichten.at(i).naar) + "\n";
+	}
+
+	return "End of message list.";
 }
 
 void Mobiel::addContact(std::string naam, int nr) {
@@ -72,4 +79,8 @@ void Mobiel::editContact(std::string naam, int nr, std::string newNaam, int newN
 		std::cout << naam << " was not found." << '\n';
 	}
 		
+}
+
+void Mobiel::addBericht(Sms Bericht) {
+	berichten.push_back(Bericht);
 }
