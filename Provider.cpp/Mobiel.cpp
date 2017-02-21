@@ -35,7 +35,10 @@ const std::string Mobiel::mobielInfo() {
 }
 
 void Mobiel::addContact(std::string naam, int nr) {
-	contactLijst.insert(std::pair<std::string, int>(naam, nr));
+	it = contactLijst.find(naam);
+	if (it != contactLijst.end()) {
+		std::cout << "contact already exists!";
+	}else contactLijst.insert(std::pair<std::string, int>(naam, nr));
 }
 
 void Mobiel::showContacts(){

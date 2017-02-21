@@ -1,2 +1,8 @@
-﻿  Mobiel.cpp
-  Provider.cpp.vcxproj -> C:\Users\Lucas\Documents\Visual Studio 2015\Projects\CPP 2017\Debug\Provider.exe
+﻿  stdafx.cpp
+  Sms.cpp
+  Provider.cpp
+  Mobiel.cpp
+  Main.cpp
+  Generating Code...
+  Provider.cpp.vcxproj -> C:\Users\Justi\Source\Repos\CPP-2017\Provider.cpp\Debug\Provider.exe
+  Provider.cpp.vcxproj -> C:\Users\Justi\Source\Repos\CPP-2017\Provider.cpp\Debug\Provider.pdb (Full PDB)
