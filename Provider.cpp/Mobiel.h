@@ -9,7 +9,7 @@ class Sms;
 
 class Mobiel {
 public:
-	Mobiel(Provider *provider = nullptr, int tellnr = 0, std::string contactNaam = "");
+	Mobiel(Provider *provider = nullptr, int tellnr = 0);
 	~Mobiel();
 	virtual void ontvang(const Sms &sms);
 	virtual void verzend(const std::string &tekst, int naar);
@@ -20,7 +20,7 @@ public:
 	std::map<std::string, int> contactLijst;
 	int telnr;
 	Provider *provider;
-	Sms bericht;
+	Sms *bericht;
 
 };
 
