@@ -16,7 +16,10 @@ int main(int argc, char *argv[]) {
 	
 	Ziggo.setLijst(&op3t);
 	Ziggo.setLijst(&sgs7);
-
+	op3t.addContact("LGC", 2);
+	op3t.addContact("N3310", 1);
+	op3t.showContacts();
+	op3t.removeContact("LGC");
 	//op3t.verzend("hoi", sgs7.telnr);	
 	//sgs7.ontvang(op3t.bericht);
 
