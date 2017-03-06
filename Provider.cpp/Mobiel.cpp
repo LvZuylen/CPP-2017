@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "Mobiel.h"
 #include <iostream>
 #include <string>

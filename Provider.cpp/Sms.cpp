@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "Sms.h"
 #include "Provider.h"
 #include "Mobiel.h"
