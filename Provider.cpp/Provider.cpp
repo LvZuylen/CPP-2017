@@ -37,7 +37,7 @@ Mobiel* Provider::getMobiel(int nr) {
 void Provider::verwerkBericht(const Sms &sms) {
 	for (unsigned int x = 0; x < lijstVector.size(); x++) {
 		if (lijstVector.at(x).telnr == sms.van) {
-			lijstVector.at(x).verzend(sms.tekst, sms.naar);
+			lijstVector.at(x).verzendNr(sms.tekst, sms.naar);
 		}
 	}
 	for (unsigned int y = 0; y < lijstVector.size(); y++) {
@@ -45,6 +45,6 @@ void Provider::verwerkBericht(const Sms &sms) {
 			lijstVector.at(y).ontvang(sms);
 		}
 	}
-	//lijst->verzend(sms.tekst, sms.naar);
+	//lijst->verzendNr(sms.tekst, sms.naar);
 	//lijst->ontvang(sms);
 }

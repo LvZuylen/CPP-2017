@@ -22,12 +22,12 @@ int main(int argc, char *argv[]) {
 
 	op3t.showContacts();
 
-	op3t.removeContact("LGC");
+	
 	//jemoder.
-	op3t.verzend("hoi", sgs7.telnr);	
+	op3t.verzendNaam("hoi", "LGC");	
 	sgs7.ontvang(op3t.bericht);
-
-	//N3310.verzend("je moder", LGC.telnr);
+	op3t.removeContact("LGC");
+	//N3310.verzendNr("je moder", LGC.telnr);
 	//LGC.ontvang(N3310.bericht);
 	//Ziggo.verwerkBericht(bericht1);
 
