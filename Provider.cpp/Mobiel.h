@@ -22,7 +22,12 @@ public:
 	virtual void editContact(std::string naam, int nr, std::string newNaam, int newNr);
 	virtual int findContact(std::string naam);
 	virtual void addBericht(Sms Bericht);
-//private:
+	virtual void setTelnr(int telnr);
+	virtual int getTelnr();
+	virtual void setBericht(const Sms &sms);
+	virtual Sms getBericht();
+
+private:
 	std::vector<Sms> berichten;
 	std::map<std::string, int> contactLijst;
 	int telnr;

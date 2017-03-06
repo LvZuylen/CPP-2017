@@ -1,3 +1,12 @@
-﻿  Main.cpp
+﻿  Mobiel.cpp
+c:\users\justi\source\repos\cpp-2017\provider.cpp\mobiel.cpp(45): warning C4018: '<': signed/unsigned mismatch
+  Main.cpp
+  Generating Code...
+  Compiling...
+  Provider.cpp
+c:\users\justi\source\repos\cpp-2017\provider.cpp\provider.cpp(15): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Sms.cpp
   Provider.cpp.vcxproj -> C:\Users\Justi\Source\Repos\CPP-2017\Provider.cpp\Debug\Provider.exe
   Provider.cpp.vcxproj -> C:\Users\Justi\Source\Repos\CPP-2017\Provider.cpp\Debug\Provider.pdb (Full PDB)

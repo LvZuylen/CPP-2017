@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 	
 	//jemoder.
 	op3t.verzendNaam("hoi", "LGC");	
-	sgs7.ontvang(op3t.bericht);
+	sgs7.ontvang(op3t.getBericht());
 	op3t.removeContact("LGC");
 	//N3310.verzendNr("je moder", LGC.telnr);
 	//LGC.ontvang(N3310.bericht);

@@ -19,24 +19,22 @@ Mobiel::~Mobiel() {
 }
 
 void Mobiel::ontvang(const Sms &sms) {
-	bericht.van = sms.van;
-	bericht.naar = sms.naar;
-	bericht.tekst = sms.tekst;
+	bericht = sms;
 	addBericht(bericht);
 }
 
 void Mobiel::verzendNr(const std::string &tekst, int naar) {
-	bericht.van = telnr;
-	bericht.naar = naar;
-	bericht.tekst = tekst; 
+	bericht.setVan(telnr);
+	bericht.setNaar(naar);
+	bericht.setTekst(tekst); 
 }
 
 void Mobiel::verzendNaam(const std::string & tekst, std::string contactNaam) {
-	bericht.van = telnr;
+	bericht.setVan(telnr);
 	if (findContact(contactNaam) != -1)
-		bericht.naar = findContact(contactNaam);
+		bericht.setNaar(findContact(contactNaam));
 	else exit(404);
-	bericht.tekst = tekst;
+	bericht.setTekst(tekst);
 }
 
 
@@ -45,7 +43,7 @@ const std::string Mobiel::mobielInfo() {
 	std::cout << "Messages: " << "\n";
 
 	for (int i = 0; i < berichten.size(); i++) {
-		std::cout << "telnr: \"" + std::to_string(telnr) + "\" bericht: \"" + berichten.at(i).tekst + "\" van " + std::to_string(berichten.at(i).van) + " naar " + std::to_string(berichten.at(i).naar) + "\n";
+		std::cout << "telnr: \"" + std::to_string(telnr) + "\" bericht: \"" + berichten.at(i).getTekst() + "\" van " + std::to_string(berichten.at(i).getVan()) + " naar " + std::to_string(berichten.at(i).getNaar()) + "\n";
 	}
 
 	return "End of message list.";
@@ -100,4 +98,21 @@ int Mobiel::findContact(std::string naam) {
 
 void Mobiel::addBericht(Sms Bericht) {
 	berichten.push_back(Bericht);
+}
+
+void Mobiel::setTelnr(int telnr) {
+	this->telnr = telnr;
+}
+
+int Mobiel::getTelnr() {
+	return this->telnr;
+}
+
+void Mobiel::setBericht(const Sms & sms) {
+	bericht = sms;
+}
+
+Sms Mobiel::getBericht()
+{
+	return bericht;
 }
