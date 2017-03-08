@@ -15,16 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="Sms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Provider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mobiel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sms.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
