@@ -78,3 +78,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 /Provider.cpp
+/Mystrings
+*.opendb
+*.db
+/.vs
+/CPP 2017
+/Debug
+/ipch/MYSTRINGS-2217c22
+/cpp 2017.sln
