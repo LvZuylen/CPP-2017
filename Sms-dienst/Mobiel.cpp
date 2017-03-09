@@ -6,7 +6,7 @@
 #include "Provider.h"
 #include <map>
 //kek lmao
-
+//jullie mam
 
 Mobiel::Mobiel(Provider * provider, int tellnr)
 	: bericht(0, 0, "") {

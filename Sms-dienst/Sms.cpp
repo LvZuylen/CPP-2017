@@ -2,7 +2,7 @@
 #include "Sms.h"
 #include "Provider.h"
 #include "Mobiel.h"
-
+//jullie mam
 Sms::Sms(int van, int naar, std::string tekst) {
 	this->van = van;
 	this->naar = naar;

@@ -1,6 +1,6 @@
 #pragma once
 #include<vector>
-
+//jullie mam
 class Mobiel;
 class Sms;
 
