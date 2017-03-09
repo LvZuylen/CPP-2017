@@ -21,7 +21,8 @@ int main() {
 void Mytimes::giveTime() {
 	normalise();
 	std::cout << hours << " h " << mins << " min " << secs << " sec " << std::endl;
-}void Mytimes::setTime(int hours, int mins, int secs) {
+}
+void Mytimes::setTime(int hours, int mins, int secs) {
 	this->hours = hours; this->mins = mins; this->secs = secs;
 }
 int Mytimes::getHours() {
