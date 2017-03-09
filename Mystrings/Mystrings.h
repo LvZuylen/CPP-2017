@@ -8,9 +8,7 @@ class Voertuig {
 	string soort;
 	int jaar;
 public:
-	Voertuig() {/*merk="leeg"; soort="leeg"; jaar=0;*/ 
-
-	};
+	Voertuig();
 	Voertuig(string merk, string soort, int jaar);
 	virtual void leesData(char data[]); //lees de voertuigen uit het array
 	virtual void geefWeer(); //zet data op het scherm

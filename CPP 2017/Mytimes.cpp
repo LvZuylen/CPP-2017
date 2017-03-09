@@ -21,8 +21,7 @@ int main() {
 void Mytimes::giveTime() {
 	normalise();
 	std::cout << hours << " h " << mins << " min " << secs << " sec " << std::endl;
-}
-void Mytimes::setTime(int hours, int mins, int secs) {
+}void Mytimes::setTime(int hours, int mins, int secs) {
 	this->hours = hours; this->mins = mins; this->secs = secs;
 }
 int Mytimes::getHours() {
@@ -50,12 +49,12 @@ bool Mytimes::equals(Mytimes & time) {
 }
 void Mytimes::normalise() {
 	if (secs > 59) {
+		mins += secs / 60;
 		secs %= 60;
-		mins++;
 	}
 	if (mins > 59) {
+		hours+=mins/60;
 		mins %= 60;
-		hours++;
 	}
 }
 //bool Mytimes::compare(int hours, int mins, int secs) {
