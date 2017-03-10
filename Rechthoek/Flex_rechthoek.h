@@ -1,16 +1,16 @@
 ﻿#pragma once
 
 #include "Rechthoek.h"
+#include "Venster.h"
 #include <string>
 
-class Rechthoek;
-class Flex_rechthoek : public Rechthoek
+class Venster;
+class Flex_rechthoek : public virtual Venster
 {
 public:
 	Flex_rechthoek(int h, int b);
 	virtual void breder();
 	virtual void hoger();
-	virtual void print();	//  opletten !!!
 private:
 	int hoogte;
 	int breedte;

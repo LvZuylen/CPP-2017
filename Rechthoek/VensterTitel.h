@@ -2,7 +2,7 @@
 #include "Venster.h"
 
 class venster;
-class Venster_met_titel : public Venster {
+class Venster_met_titel : public virtual Venster {
 public:
 	virtual void print();
 	Venster_met_titel(int h, int b, string t);

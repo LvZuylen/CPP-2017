@@ -1,12 +1,8 @@
 #include "Flex_venster.h"
 
-Flex_venster::Flex_venster(int h, int b, string t) : Flex_rechthoek(h, b), Venster_met_titel(h, b, t) {
-	hoogte = h;
-	breedte = b;
-	titel = t;
-}
 
-void Flex_venster::print()
+
+/*void Flex_venster::print()
 {
 	int a;
 	for (int i = 1; i <= hoogte; i++) {
@@ -50,3 +46,4 @@ void Flex_venster::print()
 		}
 	}
 }
+*/
