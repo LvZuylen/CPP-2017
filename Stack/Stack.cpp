@@ -16,7 +16,24 @@ int Stack::pop() {
 }
 
 void Stack::print() {
+	std::cout << "Stack: \n";
 	for (int i = 0; i < SP; i++) {
-		std::cout << stack_array[SP] << std::endl;
+		std::cout << stack_array[i] << std::endl;
 	}
+}
+
+int Stack::getSP() {
+	return SP;
+}
+
+void Stack::setSP(int a) {
+	SP = a;
+}
+
+void Stack::setStack_array(int index, int a) {
+	stack_array[index] = a;
+}
+
+int * Stack::getStack_array() {
+	return stack_array;
 }

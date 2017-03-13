@@ -54,7 +54,7 @@ void Voertuig::leesData(char data[]) {
 
 void Voertuig::naarJaar() {
 	char hetJaar[5];
-	strncpy(hetJaar, jaartal.c_str(), 4);
+	//strncpy(hetJaar, jaartal.c_str(), 4);
 	jaar = zetJaarOm(hetJaar);
 }
 
