@@ -5,7 +5,8 @@
 #include <vector>
 //jullie mam
 class Provider;
-class Sms;
+//class Sms;
+#include "Sms.h"
 
 class Mobiel {
 public:

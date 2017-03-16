@@ -1,2 +1,2 @@
-﻿  stdafx.cpp
-c:\users\justi\source\repos\cpp-2017\provider.cpp\sms-dienst\stdafx.cpp(5): fatal error C1854: cannot overwrite information formed during creation of the precompiled header in object file: 'c:\users\justi\source\repos\cpp-2017\provider.cpp\debug\stdafx.obj'
+﻿  Provider.cpp.vcxproj -> C:\Users\Justi\Documents\Visual Studio 2015\Projects\CPP-2017\Debug\Provider.exe
+  Provider.cpp.vcxproj -> C:\Users\Justi\Documents\Visual Studio 2015\Projects\CPP-2017\Debug\Provider.pdb (Full PDB)

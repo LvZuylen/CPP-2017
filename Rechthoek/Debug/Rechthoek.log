@@ -1,0 +1,17 @@
+﻿  Venster.cpp
+  Rechthoek.cpp
+  Main.cpp
+c:\users\justi\documents\visual studio 2015\projects\cpp-2017\rechthoek\flex_venster.h(21): warning C4250: 'Flex_venster': inherits 'Venster_met_titel::Venster_met_titel::print' via dominance
+  c:\users\justi\documents\visual studio 2015\projects\cpp-2017\rechthoek\venstertitel.h(7): note: see declaration of 'Venster_met_titel::print'
+  VensterTitel.cpp
+c:\users\justi\documents\visual studio 2015\projects\cpp-2017\rechthoek\venstertitel.cpp(25): warning C4018: '<': signed/unsigned mismatch
+c:\users\justi\documents\visual studio 2015\projects\cpp-2017\rechthoek\venstertitel.cpp(26): warning C4554: '^': check operator precedence for possible error; use parentheses to clarify precedence
+c:\users\justi\documents\visual studio 2015\projects\cpp-2017\rechthoek\venstertitel.cpp(30): warning C4018: '<': signed/unsigned mismatch
+c:\users\justi\documents\visual studio 2015\projects\cpp-2017\rechthoek\venstertitel.cpp(34): warning C4018: '<': signed/unsigned mismatch
+  Flex_venster.cpp
+c:\users\justi\documents\visual studio 2015\projects\cpp-2017\rechthoek\flex_venster.h(21): warning C4250: 'Flex_venster': inherits 'Venster_met_titel::Venster_met_titel::print' via dominance
+  c:\users\justi\documents\visual studio 2015\projects\cpp-2017\rechthoek\venstertitel.h(7): note: see declaration of 'Venster_met_titel::print'
+  Flex_rechthoek.cpp
+  Generating Code...
+  Rechthoek.vcxproj -> C:\Users\Justi\Documents\Visual Studio 2015\Projects\CPP-2017\Debug\Rechthoek.exe
+  Rechthoek.vcxproj -> C:\Users\Justi\Documents\Visual Studio 2015\Projects\CPP-2017\Debug\Rechthoek.pdb (Full PDB)

@@ -150,6 +150,7 @@
     <ClInclude Include="Stack_OK.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Stack.cpp" />
     <ClCompile Include="Stack_OK.cpp" />
   </ItemGroup>
