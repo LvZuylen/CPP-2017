@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include "Venster.h"
-
+//kys
 class venster;
 class Venster_met_titel : public virtual Venster {
 public:
